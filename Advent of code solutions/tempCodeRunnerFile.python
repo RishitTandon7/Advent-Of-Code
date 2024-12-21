@@ -1,0 +1,4 @@
+with open('Day1/input.txt') as f:
+    l, r = list(map(list, zip(*[list(map(int, line.split())) for line in f.read().splitlines()])))
+result = sum(x * r.count(x) for x in l)
+print(result)
